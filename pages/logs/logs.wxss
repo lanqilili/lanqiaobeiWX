@@ -1,0 +1,13 @@
+page {
+  font-family: PingFangSC-Regular;
+  height: 100%;
+  background:rgba(255,255,255,1);
+}
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}

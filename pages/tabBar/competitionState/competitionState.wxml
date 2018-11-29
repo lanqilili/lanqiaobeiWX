@@ -1,0 +1,46 @@
+<view style='padding: 0 20rpx;height: 100%;'>
+  <view style='height: 30%;'>
+    <view style='padding:20rpx 0;'>
+      <view style='height:293rpx;border-radius: 16rpx;background:rgba(255,255,255,1);'>
+        <view class='wx-center tital-font'>蓝桥杯过去时</view>
+        <scroll-view scroll-y style='height: 243rpx'>
+          <view style='display:flex;flex-direction:column-reverse'>
+            <view class='last-view-line wx-left' wx:for='{{lastLanqiaobeiData}}' wx:key='id' wx:for-item='lastItem'>
+              <view style='width:34%;'>
+                <view class='name-font'>
+                  {{lastItem.name}}</view>
+                <view class='date-font wx-center'>
+                  {{lastItem.date}}</view>
+              </view>
+              <view class='person-font wx-left' style='width:33%;'>
+                <image style='width:30rpx;height:30rpx;' src='/icon&image/老师.png'></image>指导老师：{{lastItem.teachers.length}}人</view>
+              <view class='person-font wx-left' style='width:33%;'>
+                <image style='width:30rpx;height:30rpx;' src='/icon&image/学生.png'></image>参赛学生：{{lastItem.students.length}}人</view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+  <view style='height: 70%;'>
+    <view style='padding:20rpx 0;'>
+      <view style='height:737rpx;border-radius: 16rpx;background:rgba(255,255,255,1);'>
+        <view class='wx-center tital-font'>蓝桥杯进行时</view>
+        <view class='now-view-line wx-left' wx:for='{{nowLanqiaobeiData}}' wx:key='id' wx:for-item='nowItem' catchtap='jumpCompetitionDetail'>
+          <view style='width:34%;'>
+            <view class='name-font'>
+              {{nowItem.name}}</view>
+            <view class='date-font wx-center'>
+              {{nowItem.date}}</view>
+          </view>
+          <view class='person-font wx-left' style='width:33%;'>
+            <image style='width:30rpx;height:30rpx;' src='/icon&image/学生.png'></image>参赛学生：{{nowItem.students.length}}人</view>
+          <view class='person-font wx-center' style='width:33%;'>
+            <view wx:if="{{'已结束'==nowItem.state}}" class='join-button wx-center' style='background:rgba(178,178,178,1);box-shadow:0px 4rpx 6rpx 0px rgba(0,0,0,0.1);'>比赛结束</view>
+            <view wx:elif="{{'未开始'==nowItem.state}}" class='join-button wx-center' id='{{nowItem.id}}' catchtap='joinCompetition'>马上参加</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

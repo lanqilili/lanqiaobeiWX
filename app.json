@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/index/lanqiaobei/lanqiaobei",
+    "pages/tabBar/competitionState/competitionState",
+    "pages/tabBar/myApply/myApply",
+    "pages/tabBar/myMessage/myMessage"
+  ],
+  "tabBar": {
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "selectedColor": "#b4282d",
+    "color": "#666",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "icon&image/shouye_1.png",
+        "selectedIconPath": "icon&image/shouye.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tabBar/competitionState/competitionState",
+        "iconPath": "icon&image/weizhizhuangtai.png",
+        "selectedIconPath": "icon&image/tubiao-.png",
+        "text": "比赛状态"
+      },
+      {
+        "pagePath": "pages/tabBar/myApply/myApply",
+        "iconPath": "icon&image/shenqing.png",
+        "selectedIconPath": "icon&image/baoming.png",
+        "text": "报名信息"
+      },
+      {
+        "pagePath": "pages/tabBar/myMessage/myMessage",
+        "iconPath": "icon&image/tongzhi.png",
+        "selectedIconPath": "icon&image/svg45-copy.png",
+        "text": "我的通知"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "packageTabs/apply",
+      "pages": [
+        "goApply/goApply"
+      ]
+    },
+    {
+      "root": "packageTabs/state",
+      "pages": [
+        "competitionDetail/competitionDetail"
+      ]
+    },
+    {
+      "root": "packageTabs/message",
+      "pages": [
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "安理大蓝桥杯",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  }  
+}
