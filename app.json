@@ -55,6 +55,7 @@
     {
       "root": "packageTabs/message",
       "pages": [
+        "messageDetail/messageDetail"
       ]
     }
   ],
@@ -64,5 +65,5 @@
     "navigationBarTitleText": "安理大蓝桥杯",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": false
-  }  
+  }
 }
