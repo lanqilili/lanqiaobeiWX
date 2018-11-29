@@ -2,7 +2,7 @@ var checkRes = function(res){
     if (res.statusCode != 200 || (res && res.data && !res.data.success)) {
       var msg = res.data.message;
       if (msg == null || msg == '') {
-        msg = '服务异常，请稍候重试';
+        msg = '服务出现异常，请稍候重试';
       }
       wx.showModal({
         title: '提示',
